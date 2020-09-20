@@ -1,52 +1,30 @@
-# CPP Master's Project
+# CATE Project
 
-## Catkin Directory Structure
+Cal Poly Pomona Autonomous Transportation Experience Project, which also happens to be my Master's Project.
 
-```
-workspace_folder/         -- WORKSPACE
-  src/                    -- SOURCE SPACE
-    CMakeLists.txt        -- The 'toplevel' CMake file
-    package_1/
-      CMakeLists.txt
-      package.xml
-      ...
-    package_n/
-      CATKIN_IGNORE       -- Optional empty file to exclude package_n from being processed
-      CMakeLists.txt
-      package.xml
-      ...
-  build/                  -- BUILD SPACE
-    CATKIN_IGNORE         -- Keeps catkin from walking this directory
-  devel/                  -- DEVELOPMENT SPACE (set by CATKIN_DEVEL_PREFIX)
-    bin/
-    etc/
-    include/
-    lib/
-    share/
-    .catkin
-    env.bash
-    setup.bash
-    setup.sh
-    ...
-  install/                -- INSTALL SPACE (set by CMAKE_INSTALL_PREFIX)
-    bin/
-    etc/
-    include/
-    lib/
-    share/
-    .catkin             
-    env.bash
-    setup.bash
-    setup.sh
-    ...
-```
+## Reference Material
+
+1. [Husky Tutorial](http://www.clearpathrobotics.com/assets/guides/kinetic/husky/SimulatingHusky.html)
+2. [Catkin](http://wiki.ros.org/catkin/workspaces#Source_Space)
 
 ## Configurations
+
 1. ROS Melodic
 2. Ubuntu 18.04
 
 ## Running this Project
-- ```source <your_workspace_path>/ros_project/devel/setup.bash```
-- ```rospack profile```
 
-## 
+Pull the project from Git onto your desktop
+
+```bash
+# Build the project
+catkin_make
+source <your_workspace_path>/ros_project/devel/setup.bash
+rospack profile
+```
+
+## Launch Gazebo World
+
+```bash
+roslaunch simulation cpp.launch
+```
