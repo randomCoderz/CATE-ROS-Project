@@ -679,42 +679,42 @@
       <pose frame=''>0 0 0 0 -0 0</pose>
     </model>
     <state world_name='Husky CPP'>
-      <sim_time>1920 164000000</sim_time>
-      <real_time>16 767560052</real_time>
-      <wall_time>1600571136 963443622</wall_time>
-      <iterations>16510</iterations>
+      <sim_time>2574 331000000</sim_time>
+      <real_time>105 642908999</real_time>
+      <wall_time>1601253765 343284435</wall_time>
+      <iterations>105109</iterations>
       <model name='/'>
-        <pose frame=''>-33.9372 -15.4186 0.132279 0 -0 0.000196</pose>
+        <pose frame=''>-33.9368 -15.4186 0.132279 0 -0 0.000189</pose>
         <scale>1 1 1</scale>
         <link name='base_link'>
-          <pose frame=''>-33.9372 -15.4186 0.132279 0 -0 0.000196</pose>
-          <velocity>1e-06 0 8e-06 3e-06 -0 0</velocity>
-          <acceleration>-0 -0 0 0 -0 0</acceleration>
-          <wrench>-0 -0 0 0 -0 0</wrench>
+          <pose frame=''>-33.9368 -15.4186 0.132279 0 -0 0.000189</pose>
+          <velocity>1e-06 -0 8e-06 3e-06 -0 0</velocity>
+          <acceleration>-0 0 -0 0 -0 0</acceleration>
+          <wrench>-0 0 -0 0 -0 0</wrench>
         </link>
         <link name='front_left_wheel_link'>
-          <pose frame=''>-33.6813 -15.1332 0.165099 1e-06 0.00826 0.000196</pose>
-          <velocity>1e-06 -0 8e-06 3e-06 6e-06 0</velocity>
-          <acceleration>-0 -0 0 0 -0 0</acceleration>
-          <wrench>-0 -0 0 0 -0 0</wrench>
+          <pose frame=''>-33.6808 -15.1332 0.165099 0 0.011231 0.000189</pose>
+          <velocity>1e-06 -0 8e-06 3e-06 5e-06 -0</velocity>
+          <acceleration>0 -0 0 0 -0 0</acceleration>
+          <wrench>0 -0 0 0 -0 0</wrench>
         </link>
         <link name='front_right_wheel_link'>
-          <pose frame=''>-33.6812 -15.704 0.165099 0 0.008397 0.000196</pose>
-          <velocity>1e-06 -0 7e-06 3e-06 6e-06 0</velocity>
-          <acceleration>-0 -0 0 0 -0 0</acceleration>
-          <wrench>-0 -0 0 0 -0 0</wrench>
-        </link>
-        <link name='rear_left_wheel_link'>
-          <pose frame=''>-34.1933 -15.1333 0.165099 -4e-06 0.008271 0.000196</pose>
-          <velocity>1e-06 -0 8e-06 3e-06 6e-06 0</velocity>
+          <pose frame=''>-33.6807 -15.704 0.165099 0 0.011309 0.000189</pose>
+          <velocity>1e-06 -0 7e-06 3e-06 5e-06 -0</velocity>
           <acceleration>-0 -0 -0 0 -0 0</acceleration>
           <wrench>-0 -0 -0 0 -0 0</wrench>
         </link>
+        <link name='rear_left_wheel_link'>
+          <pose frame=''>-34.1928 -15.1333 0.165099 0 0.011223 0.000189</pose>
+          <velocity>1e-06 -0 8e-06 3e-06 5e-06 -0</velocity>
+          <acceleration>-0 -0 0 0 -0 0</acceleration>
+          <wrench>-0 -0 0 0 -0 0</wrench>
+        </link>
         <link name='rear_right_wheel_link'>
-          <pose frame=''>-34.1932 -15.7041 0.165099 5e-06 0.008432 0.000196</pose>
-          <velocity>1e-06 -0 7e-06 3e-06 6e-06 0</velocity>
-          <acceleration>-0 0 -0 0 -0 0</acceleration>
-          <wrench>-0 0 -0 0 -0 0</wrench>
+          <pose frame=''>-34.1927 -15.7041 0.165099 1e-06 0.011334 0.000189</pose>
+          <velocity>1e-06 -0 7e-06 3e-06 5e-06 -0</velocity>
+          <acceleration>0 -0 -0 0 -0 0</acceleration>
+          <wrench>0 -0 -0 0 -0 0</wrench>
         </link>
       </model>
       <model name='Art_Building'>
@@ -727,11 +727,21 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='comp_sci'>
-        <pose frame=''>-29.8563 -42.0477 0 0.008034 -3.8e-05 -3.13682</pose>
+      <model name='bus'>
+        <pose frame=''>-34.015 -1.98932 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>-29.8563 -42.0477 0 0.008034 -3.8e-05 -3.13682</pose>
+          <pose frame=''>-34.015 -1.98932 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='comp_sci'>
+        <pose frame=''>-27.6454 -41.9443 0 0.021664 0.000504 3.11832</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-27.6454 -41.9443 0 0.021664 0.000504 3.11832</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -748,30 +758,30 @@
         </link>
       </model>
       <model name='school_clone_clone'>
-        <pose frame=''>37.2548 -2.35687 0 0 0 -1.58007</pose>
+        <pose frame=''>42.33 -1.77474 0 0 -0 -1.56485</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>37.2548 -2.35687 0 0 0 -1.58007</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='school_clone_clone_clone'>
-        <pose frame=''>17.8462 42.1435 0 0 -0 3.9e-05</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>17.8462 42.1435 0 0 -0 3.9e-05</pose>
+          <pose frame=''>42.33 -1.77474 0 0 -0 -1.56485</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='school_clone_clone_clone_clone'>
-        <pose frame=''>-31.4645 42.1546 0 0 0 -0.00755</pose>
+        <pose frame=''>-27.4199 41.5899 0 0 -0 0.031768</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>-31.4645 42.1546 0 0 0 -0.00755</pose>
+          <pose frame=''>-27.4199 41.5899 0 0 -0 0.031768</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='school_clone_clone_clone_clone_clone'>
+        <pose frame=''>14.7738 41.7584 0 0 0 -0.009009</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>14.7738 41.7584 0 0 0 -0.009009</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -783,7 +793,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-134.752 -4.94848 222.077 0 1.03379 -0.019805</pose>
+        <pose frame=''>-81.0348 -8.91502 175.537 -0 1.14979 -0.007804</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -823,42 +833,6 @@
         <kinematic>0</kinematic>
       </link>
       <pose frame=''>69.512 -10.4072 0 0 -0 3.14028</pose>
-    </model>
-    <model name='school_clone_clone_clone'>
-      <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://school/meshes/school.dae</uri>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://school/meshes/school.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose frame=''>16.1176 66.7683 0 0 -0 -1.58007</pose>
     </model>
     <model name='school_clone_clone_clone_clone'>
       <static>1</static>
@@ -1055,6 +1029,80 @@
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
       <pose frame=''>16.9372 -44.1532 0 0 -0 3.14028</pose>
+    </model>
+    <model name='school_clone_clone_clone_clone_clone'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://school/meshes/school.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://school/meshes/school.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>16.8485 43.4658 0 0 0 -0.009009</pose>
+    </model>
+    <model name='bus'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>model://bus/meshes/bus.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>model://bus/meshes/bus.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-34.015 -1.98932 0 0 -0 0</pose>
     </model>
   </world>
 </sdf>
