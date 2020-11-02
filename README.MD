@@ -2,6 +2,13 @@
 
 Cal Poly Pomona Autonomous Transportation Experience Project, which also happens to be my Master's Project.
 
+## Quick Commands
+
+```bash
+# Launch RVIZ
+roslaunch husky_viz view_robot.launch
+ ```
+
 ## Reference Material
 
 1. [Husky Tutorial](http://www.clearpathrobotics.com/assets/guides/kinetic/husky/SimulatingHusky.html)
