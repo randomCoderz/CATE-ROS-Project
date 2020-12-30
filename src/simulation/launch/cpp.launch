@@ -5,4 +5,5 @@
 		<!-- Take the bot and place it in our custom world -->
 		<arg name="world_name" value="$(find simulation)/worlds/cpp.world" />
 	</include>
+
 </launch>
