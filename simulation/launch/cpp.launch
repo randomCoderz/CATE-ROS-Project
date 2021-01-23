@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
-	<!-- Get the Husky Bot installed locally -->
-	<include file="$(find husky_gazebo)/launch/spawn_husky.launch"></include>
 	<include file="$(find gazebo_ros)/launch/empty_world.launch"></include>
+	<!-- Get the Husky Bot installed locally -->
+	<include file="$(find husky_gazebo)/launch/spawn_husky.launch">
+		<arg name="laser_enabled" value="true"/>
+	</include>
+
 </launch>

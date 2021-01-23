@@ -29,29 +29,41 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
   <xacro:arg name="ur5_enabled" default="$(optenv HUSKY_UR5_ENABLED false)" />
   <xacro:arg name="kinect_enabled" default="false" />
 
-  <!-- <xacro:include filename="$(find husky_description)/urdf/husky.urdf.xacro" />
-  <xacro:husky_robot /> -->
+  <xacro:include filename="$(find husky_custom_gazebo)/urdf/custom_description.gazebo.xacro"/>
 
   <!-- Insert customization below, sample provided: -->
+  <xacro:property name="camera_prop" value="0.05" />
 
-  <link name="bowler_link">
-    <visual>
-      <geometry>
-        <mesh filename="package://husky_custom_description/meshes/red_bowler.dae" />
-      </geometry>
-    </visual>
+  <joint name="camera_joint" type="fixed">
+    <parent link="top_plate_link"/>
+    <child link="left_camera_link"/>
+    <origin rpy="0 0 0" xyz="0.3 0.23 0.03"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <link name="left_camera_link">
     <collision>
-      <origin xyz="0 0 0.07" rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <box size="0.32 0.25 0.14" rpy="0 0 0"/>
+        <box size="${camera_prop} ${camera_prop} ${camera_prop}"/>
       </geometry>
     </collision>
-  </link>
 
-  <joint name="bowler_joint" type="fixed">
-    <parent link="top_plate_link" />
-    <child link="bowler_link" />
-    <origin xyz="0.1 -0.1 0" rpy="0 0 0.5" />
-  </joint>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="${camera_prop} ${camera_prop} ${camera_prop}"/>
+      </geometry>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+    </visual>
+
+    <inertial>
+      <mass value="0.001" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001" />
+    </inertial>
+  </link>
 
 </robot>
