@@ -16,7 +16,8 @@ If you are new to ROS, then it would be a good idea to study up on the following
 2. Ubuntu 18.04
 3. Python 2.x
 4. C++
-5. bash
+5. Bash
+6. Husky Packages
 
 Assumptions
 ROS Melodic and it's corresponding Husky packages have been installed

@@ -37,8 +37,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
   <joint name="camera_joint" type="fixed">
     <parent link="top_plate_link"/>
     <child link="left_camera_link"/>
-    <origin rpy="0 0 0" xyz="0.3 0.23 0.03"/>
-    <axis xyz="0 1 0"/>
+    <origin rpy="0 0 0" xyz="0.32 0.2 0.03"/>
+    <axis xyz="0 0 0"/>
   </joint>
 
   <link name="left_camera_link">
