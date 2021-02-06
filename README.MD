@@ -2,9 +2,10 @@
 
 Cal Poly Pomona Autonomous Transportation Experience Project, which also happens to be my Master's Project.
 
-## Reference Material
+## Assumptions & Reference Material
 
-If you are new to ROS, then it would be a good idea to study up on the following reference material.
+It is assumed that the user has a decent understanding of Linux (Using the terminal) and is comfortable with ROS.
+If you are new to ROS or Linux, then it would be a good idea to study up on the following reference material:
 
 1. [Getting Started with ROS (Clearpath Tutorial)](http://www.clearpathrobotics.com/assets/guides/kinetic/ros/Getting%20Started%20with%20Ubuntu.html)
 2. [Husky Tutorial](http://www.clearpathrobotics.com/assets/guides/kinetic/husky/index.html)
@@ -43,7 +44,7 @@ This particular husky is customized to use a camera. We need to add an environme
 ```bash
 vim ~/.bashrc
 # Add the following, but modify accordingly
-export HUSKY_URDF_EXTRAS=/your path/CATE-ROS-PROJECT/husky_customization/husky_custom_descrption/urdf/custom_description.urdf.xacro
+export HUSKY_URDF_EXTRAS=/<your path>/CATE-ROS-PROJECT/husky_customization/husky_custom_descrption/urdf/custom_description.urdf.xacro
 source ~/.bashrc
 ```
 
@@ -76,7 +77,7 @@ Ideally, if you found a way to override the parameter use that. Otherwise, this 
 2. Once that's installed, plug in the PS4 controller via cable or connect with bluetooth.
     * Note, I never tested it with bluetooth, but theoretically it should work fine. There is an extra step where you need to connect it via ds4drv command. See their readme on how to connect the controller via bluetooth.
 3. Change the read write permissions of whereever the controler is being mounted to.
-    * /dev/input/js0 is the current default, but could change. You can verify that it is still the default location by running ``` ds4drv ``` in bash.
+    * /dev/input/js0 is the current default, but could change. You can verify that it is still the default location by running the ``` ds4drv ```  command in bash.
     * You will see something along the line of "created devices /dev/input/whatever (joystick)". If it's changed, just use this new line, instead of /dev/input/js0.
 
 ```bash
