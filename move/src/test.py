@@ -14,7 +14,8 @@ def movebot_forward():
     rospy.init_node('Movement', anonymous=True)
     rate = rospy.Rate(10)
     vel_msg = Twist()
-    while not rospy.is_shutdown():
+    x = 0
+    while x != 50:
         vel_msg.linear.x = 10
         vel_msg.linear.y = 0
         vel_msg.linear.z = 0
@@ -24,6 +25,9 @@ def movebot_forward():
         rospy.loginfo("Publishing forward...")
         pub.publish(vel_msg)
         rate.sleep()
+        x +=1 
+    # while not rospy.is_shutdown():
+
 
 # Moves bot right manually
 def movebot_right():
@@ -31,15 +35,19 @@ def movebot_right():
     rospy.init_node('Movement', anonymous=True)
     rate = rospy.Rate(10)
     vel_msg = Twist()
-    vel_msg.linear.x = 0
-    vel_msg.linear.y = 0
-    vel_msg.linear.z = 0
-    vel_msg.angular.x = 10
-    vel_msg.angular.y = 0
-    vel_msg.angular.z = 0
-    rospy.loginfo("Publishing right...")
-    pub.publish(vel_msg)
-    rate.sleep()
+    x = 0
+    while x != 50:
+        vel_msg.linear.x = 0
+        vel_msg.linear.y = 0
+        vel_msg.linear.z = 0
+        vel_msg.angular.x = 0
+        vel_msg.angular.y = 0
+        vel_msg.angular.z = -0.5
+        rospy.loginfo("Publishing right...")
+        pub.publish(vel_msg)
+        rate.sleep()
+        x += 1
+    
 
 # Moves bot left
 def movebot_left():
@@ -48,16 +56,18 @@ def movebot_left():
     rate = rospy.Rate(10)
     vel_msg = Twist()
 
-    while not rospy.is_shutdown():
-        vel_msg.linear.x = -10
+    x = 0
+    while x != 50:
+        vel_msg.linear.x = 0
         vel_msg.linear.y = 0
         vel_msg.linear.z = 0
         vel_msg.angular.x = 0
         vel_msg.angular.y = 0
-        vel_msg.angular.z = 0
+        vel_msg.angular.z = 0.5
         rospy.loginfo("Publishing left...")
         pub.publish(vel_msg)
         rate.sleep()
+        x += 1
 
 # Moves bot backwards
 def movebot_reverse():
@@ -66,7 +76,8 @@ def movebot_reverse():
     rate = rospy.Rate(10)
     vel_msg = Twist()
 
-    while not rospy.is_shutdown():
+    x = 0
+    while x != 50:
         vel_msg.linear.x = -10
         vel_msg.linear.y = 0
         vel_msg.linear.z = 0
@@ -76,6 +87,7 @@ def movebot_reverse():
         rospy.loginfo("Publishing reverse...")
         pub.publish(vel_msg)
         rate.sleep()
+        x += 1
 
 # Adapater for Deep learning algorithm
 # def movebot_auto(linear_x, linear_y, linear_z, angular_x, angular_y, angular_z):
@@ -99,4 +111,7 @@ def movebot_reverse():
 if __name__ == '__main__':
     try:
         movebot_forward()
+        movebot_right()
+        movebot_left()
+        movebot_reverse()
     except rospy.ROSInterruptException: pass
