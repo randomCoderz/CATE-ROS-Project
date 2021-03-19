@@ -15,13 +15,36 @@ If you are new to ROS or Linux, then it would be a good idea to study up on the 
 
 1. ROS Melodic
 2. Ubuntu 18.04
-3. Python 2.x
+3. Python 2/3
 4. C++
 5. Bash
 6. Husky Packages
 
-Assumptions
-ROS Melodic and it's corresponding Husky packages have been installed
+## Assumptions
+
+1. Decent understanding of how to use the Linux Terminal
+2. Some knowledge of bash
+
+## Installing/Configuring ROS/Husky simulator
+
+I made a few tweaks to the installation to make it work with Python 3 scripts. Please note, DO NOT use sudo autoremove, it will mess with the Python3 packages.
+
+Install ROS Melodic like you normally would then do the following in this order.
+
+```bash
+sudo apt install python3-pip python3-all-dev python3-rospkg
+apt install ros-melodic-desktop-full --fix-missing
+# Add the following directive on top of any python3 scripts
+#!/usr/bin/env python3
+```
+
+Now install Husky Melodic packages
+
+```bash
+# If you upgrade to ROS Neotic+, assuming it's supported replace melodic with neotic
+sudo apt-get install ros-melodic-husky-desktop
+sudo apt-get install ros-melodic-husky-simulator
+```
 
 ## Running this Project
 
@@ -75,10 +98,10 @@ Ideally, if you found a way to override the parameter use that. Otherwise, this 
 
 1. Install [ds4drv](https://github.com/chrippa/ds4drv)
 2. Once that's installed, plug in the PS4 controller via cable or connect with bluetooth.
-    * Note, I never tested it with bluetooth, but theoretically it should work fine. There is an extra step where you need to connect it via ds4drv command. See their readme on how to connect the controller via bluetooth.
+    - Note, I never tested it with bluetooth, but theoretically it should work fine. There is an extra step where you need to connect it via ds4drv command. See their readme on how to connect the controller via bluetooth.
 3. Change the read write permissions of whereever the controler is being mounted to.
-    * /dev/input/js0 is the current default, but could change. You can verify that it is still the default location by running the ``` ds4drv ```  command in bash.
-    * You will see something along the line of "created devices /dev/input/whatever (joystick)". If it's changed, just use this new line, instead of /dev/input/js0.
+    - /dev/input/js0 is the current default, but could change. You can verify that it is still the default location by running the ``` ds4drv ```  command in bash.
+    - You will see something along the line of "created devices /dev/input/whatever (joystick)". If it's changed, just use this new line, instead of /dev/input/js0.
 
 ```bash
 # Check if mounted
