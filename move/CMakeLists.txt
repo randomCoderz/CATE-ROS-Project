@@ -8,12 +8,15 @@ project(move)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  OpenCV
+  cv_bridge
+  image_transport
+  sensor_msgs
   message_generation
   rospy
   std_msgs
-  roscpp
 )
+
+find_package(OpenCV REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -150,6 +153,7 @@ include_directories(
 
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(${PROJECT_NAME}_node
+#   ${OpenCV_LIBRARIES}
 #   ${catkin_LIBRARIES}
 # )
 

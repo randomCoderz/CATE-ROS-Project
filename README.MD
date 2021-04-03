@@ -15,7 +15,7 @@ If you are new to ROS or Linux, then it would be a good idea to study up on the 
 
 1. ROS Melodic
 2. Ubuntu 18.04
-3. Python 2/3
+3. Python 2
 4. C++
 5. Bash
 6. Husky Packages
@@ -27,23 +27,20 @@ If you are new to ROS or Linux, then it would be a good idea to study up on the 
 
 ## Installing/Configuring ROS/Husky simulator
 
-I made a few tweaks to the installation to make it work with Python 3 scripts. Please note, DO NOT use sudo autoremove, it will mess with the Python3 packages.
-
-Install ROS Melodic like you normally would then do the following in this order.
-
-```bash
-sudo apt install python3-pip python3-all-dev python3-rospkg
-apt install ros-melodic-desktop-full --fix-missing
-# Add the following directive on top of any python3 scripts
-#!/usr/bin/env python3
-```
-
 Now install Husky Melodic packages
 
 ```bash
 # If you upgrade to ROS Neotic+, assuming it's supported replace melodic with neotic
 sudo apt-get install ros-melodic-husky-desktop
 sudo apt-get install ros-melodic-husky-simulator
+```
+
+## Install libraries
+
+Install OpenCV 3 for Python.
+
+```python
+pip install opencv-python==3.4.2.17
 ```
 
 ## Running this Project
