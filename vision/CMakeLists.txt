@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(move)
+project(vision)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -9,14 +9,11 @@ project(move)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   cv_bridge
-  image_transport
-  sensor_msgs
   message_generation
   rospy
+  sensor_msgs
   std_msgs
 )
-
-find_package(OpenCV REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -75,7 +72,7 @@ find_package(OpenCV REQUIRED)
 ## Generate added messages and services with any dependencies listed here
 # generate_messages(
 #   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
+#   sensor_msgs#   std_msgs
 # )
 
 ################################################
@@ -109,8 +106,8 @@ find_package(OpenCV REQUIRED)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES move
-  CATKIN_DEPENDS message_runtime rospy
+#  LIBRARIES vision
+#  CATKIN_DEPENDS cv_bridge message_generation rospy sensor_msgs std_msgs
 #  DEPENDS system_lib
 )
 
@@ -128,7 +125,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/move.cpp
+#   src/${PROJECT_NAME}/vision.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -139,7 +136,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/move_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/vision_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -153,7 +150,6 @@ include_directories(
 
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(${PROJECT_NAME}_node
-#   ${OpenCV_LIBRARIES}
 #   ${catkin_LIBRARIES}
 # )
 
@@ -167,8 +163,8 @@ include_directories(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
-  src/main.py
-  src/movement.py
+  src/road.py
+  src/vision_main.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
@@ -205,7 +201,7 @@ catkin_install_python(PROGRAMS
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_move.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_vision.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
