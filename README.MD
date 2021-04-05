@@ -33,6 +33,7 @@ Now install Husky Melodic packages
 # If you upgrade to ROS Neotic+, assuming it's supported replace melodic with neotic
 sudo apt-get install ros-melodic-husky-desktop
 sudo apt-get install ros-melodic-husky-simulator
+sudo apt-get install ros-melodic-husky-navigation
 ```
 
 ## Install libraries
@@ -91,7 +92,7 @@ roslaunch simulation cpp.launch joy_node/dev=/dev/input/js0
 ```
 
 This for some reason did not work. So I had to manually override the config file to force it to use the right folder.
-Ideally, if you found a way to override the parameter use that. Otherwise, this is a hack/last-resort kind of solution.
+Ideally, if you found a way to override the parameter use that. Otherwise, this is a hacky kind of solution.
 
 1. Install [ds4drv](https://github.com/chrippa/ds4drv)
 2. Once that's installed, plug in the PS4 controller via cable or connect with bluetooth.

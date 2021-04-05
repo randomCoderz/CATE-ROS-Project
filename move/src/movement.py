@@ -31,7 +31,7 @@ class Movement:
             rospy.loginfo("Publishing forward...")
             pub.publish(vel_msg)
             rate.sleep()
-            x +=1 
+            x += 1 
         # while not rospy.is_shutdown():
 
 

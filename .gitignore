@@ -19,5 +19,4 @@ msg/*Result.msg
 msg/_*.py
 build_isolated/
 devel_isolated/
-move/src/__pycache__/
-move/src/*.pyc
+**/*.pyc
