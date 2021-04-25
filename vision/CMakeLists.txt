@@ -165,6 +165,7 @@ include_directories(
 catkin_install_python(PROGRAMS
   src/road.py
   src/vision_main.py
+  src/image_train.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
