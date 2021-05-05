@@ -31,8 +31,8 @@ class Road:
             self.pub.publish(self.bridge.cv2_to_imgmsg(cv_image))
         else:
             averaged_lines = self.average_slope_intercept(cv_image, lines)
-            line_image = self.display_lines(cv_image, averaged_lines)
-            combo_image = cv2.addWeighted(cv_image, 0.8, line_image, 1, 1)
+            img = self.display_lines(cv_image, averaged_lines)
+            combo_image = cv2.addWeighted(cv_image, 0.8, img, 1, 1)
             self.pub.publish(self.bridge.cv2_to_imgmsg(combo_image))
     
     def canny_edge_detector(self, image):
